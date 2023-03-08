@@ -49,6 +49,7 @@
             btnGuncelle.TabIndex = 7;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = false;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // btnKaydet
             // 
@@ -59,6 +60,7 @@
             btnKaydet.TabIndex = 6;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = false;
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // lstListe
             // 
@@ -68,6 +70,7 @@
             lstListe.Name = "lstListe";
             lstListe.Size = new Size(130, 154);
             lstListe.TabIndex = 9;
+            lstListe.SelectedIndexChanged += lstListe_SelectedIndexChanged;
             // 
             // txtAd
             // 

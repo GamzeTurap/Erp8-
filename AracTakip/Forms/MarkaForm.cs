@@ -82,4 +82,9 @@ public partial class MarkaForm : Form
             MessageBox.Show($"Bir hata oluştu: {ex.Message}");
         }
     }
+
+    private void MarkaForm_Load(object sender, EventArgs e)
+    {
+        lstListe.DataSource = Liste;
+    }
 }

@@ -40,25 +40,26 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.Location = new Point(12, 19);
             label1.Name = "label1";
-            label1.Size = new Size(61, 15);
+            label1.Size = new Size(80, 17);
             label1.TabIndex = 0;
-            label1.Text = "Marka Adı";
+            label1.Text = "Marka Adı :";
             // 
             // txtAd
             // 
-            txtAd.Location = new Point(79, 16);
+            txtAd.Location = new Point(98, 19);
             txtAd.Name = "txtAd";
-            txtAd.Size = new Size(171, 23);
+            txtAd.Size = new Size(152, 23);
             txtAd.TabIndex = 0;
             // 
             // pbResim
             // 
             pbResim.BorderStyle = BorderStyle.Fixed3D;
-            pbResim.Location = new Point(79, 45);
+            pbResim.Location = new Point(98, 58);
             pbResim.Name = "pbResim";
-            pbResim.Size = new Size(171, 169);
+            pbResim.Size = new Size(152, 85);
             pbResim.SizeMode = PictureBoxSizeMode.StretchImage;
             pbResim.TabIndex = 2;
             pbResim.TabStop = false;
@@ -68,37 +69,39 @@
             // 
             lstListe.FormattingEnabled = true;
             lstListe.ItemHeight = 15;
-            lstListe.Location = new Point(263, 16);
+            lstListe.Location = new Point(270, 19);
             lstListe.Name = "lstListe";
-            lstListe.Size = new Size(130, 229);
+            lstListe.Size = new Size(107, 124);
             lstListe.TabIndex = 3;
             lstListe.SelectedIndexChanged += lstListe_SelectedIndexChanged;
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(79, 220);
+            btnKaydet.BackColor = SystemColors.ActiveCaption;
+            btnKaydet.Location = new Point(98, 162);
             btnKaydet.Name = "btnKaydet";
             btnKaydet.Size = new Size(77, 26);
             btnKaydet.TabIndex = 1;
             btnKaydet.Text = "Kaydet";
-            btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.UseVisualStyleBackColor = false;
             btnKaydet.Click += btnKaydet_Click;
             // 
             // btnGuncelle
             // 
-            btnGuncelle.Location = new Point(173, 220);
+            btnGuncelle.BackColor = SystemColors.ActiveCaption;
+            btnGuncelle.Location = new Point(181, 162);
             btnGuncelle.Name = "btnGuncelle";
             btnGuncelle.Size = new Size(77, 26);
             btnGuncelle.TabIndex = 2;
             btnGuncelle.Text = "Güncelle";
-            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.UseVisualStyleBackColor = false;
             btnGuncelle.Click += btnGuncelle_Click;
             // 
             // MarkaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(434, 300);
+            ClientSize = new Size(417, 208);
             Controls.Add(btnGuncelle);
             Controls.Add(btnKaydet);
             Controls.Add(lstListe);
@@ -107,6 +110,7 @@
             Controls.Add(label1);
             Name = "MarkaForm";
             Text = "MarkaForm";
+            Load += MarkaForm_Load;
             ((System.ComponentModel.ISupportInitialize)pbResim).EndInit();
             ResumeLayout(false);
             PerformLayout();
