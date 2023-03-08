@@ -55,6 +55,7 @@
             // 
             // pbResim
             // 
+            pbResim.BorderStyle = BorderStyle.Fixed3D;
             pbResim.Location = new Point(79, 45);
             pbResim.Name = "pbResim";
             pbResim.Size = new Size(171, 169);
