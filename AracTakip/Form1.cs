@@ -1,5 +1,6 @@
 using AracTakip.Data;
 using AracTakip.Forms;
+using AracTakip.Helpers;
 using AracTakip.Models;
 
 namespace AracTakip
@@ -15,7 +16,8 @@ namespace AracTakip
         private ModelForm _modelForm;
         private void Form1_Load(object sender, EventArgs e)
         {
-            _dataContext = new();//TODO:Data katmanýndan sonra JSON dan okuyacaðýz.
+            var data = DataHelper.Load();
+            _dataContext = data ?? new();
         }
 
         private void markaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,7 +27,7 @@ namespace AracTakip
                 _markaForm = new MarkaForm();
                 _markaForm.MdiParent = this;
                 _markaForm.Text = "Marka Formu";
-                _markaForm.Liste = _dataContext.Markalar;
+                _markaForm.DataContext = _dataContext;
                 _markaForm.Show();
             }
         }
@@ -34,8 +36,7 @@ namespace AracTakip
             _modelForm = new ModelForm();
             _modelForm.MdiParent = this;
             _modelForm.Text = "Model Formu";
-            _modelForm.Markalar = _dataContext.Markalar;
-            _modelForm.Liste = _dataContext.Modeller;
+            _modelForm.DataContext = _dataContext;
             _modelForm.Show();
         }
     }
