@@ -106,6 +106,7 @@
             btnGüncelle.TabIndex = 5;
             btnGüncelle.Text = "Güncelle";
             btnGüncelle.UseVisualStyleBackColor = false;
+            btnGüncelle.Click += btnGüncelle_Click;
             // 
             // lstListe
             // 

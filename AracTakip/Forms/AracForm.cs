@@ -46,6 +46,8 @@ public partial class AracForm : Form
             lstListe.DataSource = null;
             lstListe.DataSource = DataContext.Araclar;
             DataHelper.Save(DataContext);
+            this.FormCleaner(Controls);
+
         }
         catch (Exception ex)
         {
@@ -63,5 +65,18 @@ public partial class AracForm : Form
         //Find bulamazsa null döndürüyor.
         //FirstOfDifault find e teknik olarak benzer. Null değil bir değer atar.
         cmbModel.SelectedItem = DataContext.Modeller.First(x => x.Id == seciliArac.Model.Id);
+    }
+
+    private void btnGüncelle_Click(object sender, EventArgs e)
+    {
+        if (lstListe.SelectedIndex == -1) return;
+        Arac seciliArac = (Arac)lstListe.SelectedItem;
+        seciliArac.Plaka = txtPlaka.Text;
+        seciliArac.Model = (Model)cmbModel.SelectedItem;
+        lstListe.DataSource = null;
+        lstListe.DataSource = DataContext.Araclar;
+        DataHelper.Save(DataContext);
+        this.FormCleaner(Controls);
+
     }
 }

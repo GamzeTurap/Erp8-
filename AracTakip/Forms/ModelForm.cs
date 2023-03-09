@@ -46,6 +46,7 @@ public partial class ModelForm : Form
             lstListe.DataSource = null;
             lstListe.DataSource = DataContext.Modeller;
             DataHelper.Save(DataContext);
+            this.FormCleaner(Controls);
         }
         catch (Exception ex)
         {
@@ -60,6 +61,18 @@ public partial class ModelForm : Form
         txtAd.Text = model.Ad;
         cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipi);
         cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
+        //cmbMarka.SelectedItem = SearchMarkaFunc(model.Marka.Id);
+        Func<bool, Marka> SearchMarkaFunc = (bool condition) =>
+        {
+            foreach(var item in DataContext.Markalar)
+            {
+                if(condition)
+                {
+                    return item;
+                }
+            }
+            return null;
+        };
     }
 
     private void btnGuncelle_Click(object sender, EventArgs e)
@@ -72,5 +85,6 @@ public partial class ModelForm : Form
         lstListe.DataSource = null;
         lstListe.DataSource = DataContext.Modeller;
         DataHelper.Save(DataContext);
+        this.FormCleaner(Controls);
     }
 }

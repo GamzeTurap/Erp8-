@@ -9,9 +9,9 @@ public partial class MarkaForm : Form
     {
         InitializeComponent();
     }
-    public EnvanterContext DataContext{get;set;}
-    
-   // public List<Marka> Liste { get; set; } = new();
+    public EnvanterContext DataContext { get; set; }
+
+    // public List<Marka> Liste { get; set; } = new();
     private void btnKaydet_Click(object sender, EventArgs e)
     {
         try
@@ -24,19 +24,20 @@ public partial class MarkaForm : Form
             {
                 marka.Logo = (byte[])(new ImageConverter().ConvertTo(pbResim.Image, typeof(byte[])));
             }
+            else
+                marka.Logo = null;
 
             DataContext.Markalar.Add(marka);
             lstListe.DataSource = null;
             lstListe.DataSource = DataContext.Markalar;
             DataHelper.Save(DataContext);
-
+            this.FormCleaner(Controls);
         }
         catch (Exception ex)
         {
             MessageBox.Show($"Bir hata oluştu: {ex.Message}");
         }
     }
-
     private void pbResim_Click(object sender, EventArgs e)
     {
         OpenFileDialog dosyaAc = new OpenFileDialog();
@@ -82,6 +83,7 @@ public partial class MarkaForm : Form
             lstListe.DataSource = null;
             lstListe.DataSource = DataContext.Markalar;
             lstListe.DataSource = DataContext.Markalar;
+            this.FormCleaner(Controls);
         }
         catch (Exception ex)
         {
