@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,7 +59,7 @@ public partial class ModelForm : Form
         Model model = (Model)lstListe.SelectedItem;
         txtAd.Text = model.Ad;
         cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipi);
-        cmbMarka.SelectedItem = model.Marka;
+        cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
     }
 
     private void btnGuncelle_Click(object sender, EventArgs e)

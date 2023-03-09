@@ -14,6 +14,7 @@ namespace AracTakip
         private EnvanterContext _dataContext;
         private MarkaForm _markaForm;
         private ModelForm _modelForm;
+        private AracForm _aracForm;
         private void Form1_Load(object sender, EventArgs e)
         {
             var data = DataHelper.Load();
@@ -38,6 +39,19 @@ namespace AracTakip
             _modelForm.Text = "Model Formu";
             _modelForm.DataContext = _dataContext;
             _modelForm.Show();
+        }
+
+        private void aracToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_aracForm == null || _aracForm.IsDisposed)
+            {
+                _aracForm = new AracForm();
+                _aracForm.MdiParent = this;
+                _aracForm.Text = "Arac Formu";
+                _aracForm.DataContext = _dataContext;
+                _aracForm.Show();
+
+            }
         }
     }
 }
