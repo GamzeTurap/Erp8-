@@ -48,5 +48,10 @@ namespace RandevuSistemi
             Button basilanButon = (Button)sender;
             this.Text = basilanButon.Text;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -61,7 +61,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(378, 454);
+            tableLayoutPanel1.Size = new Size(770, 402);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // textBox1
@@ -69,7 +69,7 @@
             textBox1.Dock = DockStyle.Top;
             textBox1.Location = new Point(3, 3);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(372, 23);
+            textBox1.Size = new Size(764, 23);
             textBox1.TabIndex = 0;
             // 
             // textBox2
@@ -77,7 +77,7 @@
             textBox2.Dock = DockStyle.Top;
             textBox2.Location = new Point(3, 32);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(372, 23);
+            textBox2.Size = new Size(764, 23);
             textBox2.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -93,7 +93,7 @@
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(372, 100);
+            tableLayoutPanel2.Size = new Size(764, 100);
             tableLayoutPanel2.TabIndex = 2;
             // 
             // btnUret
@@ -101,7 +101,7 @@
             btnUret.Dock = DockStyle.Top;
             btnUret.Location = new Point(3, 3);
             btnUret.Name = "btnUret";
-            btnUret.Size = new Size(180, 44);
+            btnUret.Size = new Size(376, 44);
             btnUret.TabIndex = 0;
             btnUret.Text = "Mesai Saatlerini Üret";
             btnUret.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@
             // button2
             // 
             button2.Dock = DockStyle.Top;
-            button2.Location = new Point(189, 3);
+            button2.Location = new Point(385, 3);
             button2.Name = "button2";
-            button2.Size = new Size(180, 44);
+            button2.Size = new Size(376, 44);
             button2.TabIndex = 1;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             flp1.Location = new Point(3, 167);
             flp1.Name = "flp1";
             flp1.Padding = new Padding(5);
-            flp1.Size = new Size(372, 284);
+            flp1.Size = new Size(764, 284);
             flp1.TabIndex = 3;
             // 
             // button3
@@ -141,6 +141,7 @@
             button3.TabIndex = 0;
             button3.Text = "08:45";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button7
             // 
@@ -182,7 +183,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(378, 454);
+            ClientSize = new Size(770, 402);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
