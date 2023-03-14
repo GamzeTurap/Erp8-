@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BagyYazilim
+namespace BagyYazilim;
+
+public class BagyMenu
 {
-    internal class BagyMenu
-    {
-    }
 }

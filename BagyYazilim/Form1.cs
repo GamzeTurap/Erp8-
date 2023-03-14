@@ -28,16 +28,16 @@ public partial class Form1 : Form
     private void ekleToolStripMenuItem2_Click(object sender, EventArgs e)
     {
         flpMasa.Controls.Clear();
-        int katSayisi = int.Parse()
-        for (int kat = 1; kat <=katSayisi; kat++)
-        {
+       // int katSayisi = int.Parse()
+       // for (int kat = 1; kat <=katSayisi; kat++)
+       // {
 
-            int sonrakiKat = kat;
+            //int sonrakiKat = kat;
 
-            string btnText = $"{kat}";
-            Button yeniButon = ButonUret(btnText);
-            flpMasa.Controls.Add(yeniButon);
-        }
+            //string btnText = $"{kat}";
+            //Button yeniButon = ButonUret(btnText);
+            //flpMasa.Controls.Add(yeniButon);
+        //}
     }
     private Button ButonUret(string btnText)
     {
